@@ -2,8 +2,6 @@
 @import _mixins
 @import _vars
 
-//background for cards
-
 .center
   padding: 0 calc(50% - 590px)
 
@@ -64,6 +62,7 @@
   &__button:focus
     background-color: $hover-grey
     color: $font-white
+    cursor: pointer
 
 .promo
   height: 90vh
@@ -204,6 +203,7 @@
   display: inline-flex
   transition: 1s
   align-items: center
+  max-width: max-content
   &::before
     content: ""
     display: block
@@ -216,6 +216,7 @@
   &:hover,&:focus
     background-color: $hover-grey
     color: $font-white
+    cursor: pointer
   &:hover::before,&:hover::before
     background-color: $background-white
 
@@ -266,7 +267,13 @@
     top: 11px
     width: 63px
     height: 30px
+    transition: 1s
     +font-normal(normal, 400, 13px, 20px, $font-white)
+    &:hover
+      background-color: $hover-grey
+      color: $font-black
+      cursor: pointer
+      
 
 .footer-top
   border-bottom: 2px solid $font-white

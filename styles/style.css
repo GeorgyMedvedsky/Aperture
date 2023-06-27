@@ -91,6 +91,7 @@
 .menu__button:hover, .menu__button:focus {
   background-color: rgba(192, 192, 192, 0.3764705882);
   color: #FFFFFF;
+  cursor: pointer;
 }
 
 .promo {
@@ -103,7 +104,6 @@
   background: center/cover no-repeat url("../img/promo.jpg");
 }
 .promo__title {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 18px;
@@ -114,7 +114,6 @@
   color: #FFFFFF;
 }
 .promo__subtitle {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-bottom: 3px;
@@ -163,7 +162,6 @@
   background: center/cover no-repeat url("../img/promo3.jpg");
 }
 .promo3__content {
-  max-width: -webkit-fit-content;
   max-width: -moz-fit-content;
   max-width: fit-content;
 }
@@ -278,7 +276,6 @@
 }
 
 .button-link {
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   cursor: pointer;
@@ -297,6 +294,8 @@
   display: inline-flex;
   transition: 1s;
   align-items: center;
+  max-width: -moz-max-content;
+  max-width: max-content;
 }
 .button::before {
   content: "";
@@ -311,6 +310,7 @@
 .button:hover, .button:focus {
   background-color: rgba(192, 192, 192, 0.3764705882);
   color: #FFFFFF;
+  cursor: pointer;
 }
 .button:hover::before, .button:hover::before {
   background-color: #FFFFFF;
@@ -381,11 +381,17 @@
   top: 11px;
   width: 63px;
   height: 30px;
+  transition: 1s;
   font-style: normal;
   font-weight: 400;
   font-size: 13px;
   line-height: 20px;
   color: #FFFFFF;
+}
+.footer__input-submit:hover {
+  background-color: rgba(192, 192, 192, 0.3764705882);
+  color: #000000;
+  cursor: pointer;
 }
 
 .footer-top {
