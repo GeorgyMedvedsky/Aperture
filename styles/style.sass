@@ -1,0 +1,306 @@
+@import _reset
+@import _mixins
+@import _vars
+
+//background for cards
+
+.center
+  padding: 0 calc(50% - 590px)
+
+.font
+  &__main_grey
+    +font-normal(normal, 400, 14px, 20px, $font-grey)
+
+  &__monospace_white
+    +font-monospace(normal, 400, 14px, 20px, 2px, $font-white, uppercase)
+
+.logo
+  margin-top: 12px
+
+.header
+  height: 10vh
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background-color: $background-black
+
+.menu
+  display: flex
+  justify-content: center
+  &__list
+    display: flex
+    align-items: center
+  &__link
+    margin-right: 32px
+    a
+      padding: 10px 0
+      cursor: pointer
+      position: relative
+      transition: 1s
+    a:hover,
+    a:focus
+      color: $hover-grey
+    a::after
+      content: ""
+      display: block
+      position: absolute
+      left: 0
+      width: 0
+      height: 2px
+      background-color: $hover-grey
+      transition: 1s
+    a:hover::after,
+    a:focus::after
+      width: 100%
+  &__button
+    +font-normal(normal, 400, 16px, 20px, $font-black)
+    background: $background-white
+    border-radius: 14px
+    padding: 10px 20px
+    letter-spacing: 0.4px
+    transition: 1s
+    cursor: pointer
+  &__button:hover,
+  &__button:focus
+    background-color: $hover-grey
+    color: $font-white
+
+.promo
+  height: 90vh
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  align-items: center
+  position: relative
+  background: center / cover no-repeat url("../img/promo.jpg")
+  &__title
+    width: fit-content
+    margin-bottom: 18px
+    +font-normal(normal, 400, 54px, 59px, $font-white)
+  &__subtitle
+    width: fit-content
+    margin-bottom: 3px
+    order: -1
+  &__description
+    width: 580px
+    margin-bottom: 70px
+    text-align: center
+  &__textbox
+    position: absolute
+    width: 270px
+    top: 260px
+    right: 60px
+
+.promo2
+  position: relative
+  height: 600px
+  background: center / cover no-repeat url("../img/promo2.jpg")
+
+.promo3
+  position: relative
+  height: 540px
+  display: grid
+  grid-template-columns: repeat(2, 50%)
+  &__title
+    +font-normal(normal, 400, 28px, 32px, $font-white)
+    margin-bottom: 14px
+  &__description
+    margin-bottom: 20px
+  &__left
+    padding: 170px 100px 0
+    background-color: $background-black
+  &__right
+    background: center / cover no-repeat url("../img/promo3.jpg")
+  &__content
+    max-width: fit-content
+
+.promo4
+  position: relative
+  height: 600px
+  background: center / cover no-repeat url("../img/promo4.jpg")
+
+.promo5
+  position: relative
+  height: 600px
+  background: bottom / cover no-repeat url("../img/promo5.jpg")
+
+.promo6
+  height: 415px
+  background-color: $background-black
+  display: flex
+  &__textbox
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    width: 600px
+    margin: 0 auto
+
+.photo-title
+  margin-bottom: 6px
+
+.photo-description
+  margin-bottom: 20px
+
+.details
+  +font-normal(normal, 400, 12px, 12px, $font-white)
+  display: flex
+  position: absolute
+  bottom: 45px
+  right: 40px
+  &__icon
+    margin-right: 6px
+  &__item:not(:last-child)
+    margin-right: 16px
+
+.product
+  background: $background-black
+  padding-top: 112px
+  padding-bottom: 100px
+  &__title
+    +font-normal(normal, 400, 40px, 42px, $font-white)
+    text-align: center
+    margin-bottom: 16px
+  &__subtitle
+    +font-normal(normal, 400, 23px, 30px, $font-grey)
+    text-align: center
+    margin-bottom: 42px
+
+.cards
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  gap: 16px
+  justify-content: center
+
+.card
+  height: 600px
+  padding: 30px
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  &:first-child
+    background: center / cover no-repeat url("../img/card1.jpg")
+  &:nth-child(2)
+    background: center / cover no-repeat url("../img/card2.jpg")
+  &:nth-child(3)
+    background: center / cover no-repeat url("../img/card3.jpg")
+  &:last-child
+    background: center / cover no-repeat url("../img/card4.jpg")
+  &__title
+    margin-bottom: 10px
+  &__description
+    margin-bottom: 18px
+
+.button-link
+  width: fit-content
+  cursor: pointer
+
+.button
+  +font-normal(normal, 400, 15px, 20px, $font-black)
+  letter-spacing: 0.4px
+  background-color: $background-white
+  padding: 5px 10px
+  border-radius: 20px
+  display: inline-flex
+  transition: 1s
+  align-items: center
+  &::before
+    content: ""
+    display: block
+    width: 32px
+    height: 32px
+    background-color: $background-black
+    border-radius: 14px
+    transition: 1s
+    margin-right: 10px
+  &:hover,&:focus
+    background-color: $hover-grey
+    color: $font-white
+  &:hover::before,&:hover::before
+    background-color: $background-white
+
+.partners
+  background-color: $background-black
+  padding: 112px 182px 140px
+  &__title
+    +font-normal(normal, 400, 40px, 42px, $font-white)
+    text-align: center
+    margin-bottom: 15px
+  &__description
+    +font-normal(normal, 400, 24px, 30px, $font-grey)
+    text-align: center
+    margin-bottom: 20px
+  &__logos
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-top: 82px
+
+.footer
+  background-color: $background-black
+  &__nav
+    display: flex
+  &__link
+    letter-spacing: 0
+    text-transform: none
+    margin-top: 10px
+  &__menu:not(:last-of-type)
+    margin-right: 50px
+  &__input-form
+    position: relative
+  &__input
+    height: 52px
+    width: 450px
+    padding: 11px
+    background: $background-white
+    border-radius: 12px
+    box-sizing: border-box
+    outline: none
+  &__input-submit
+    background: $background-black
+    border-radius: 11px
+    color: $font-white
+    cursor: pointer
+    position: absolute
+    right: 6px
+    top: 11px
+    width: 63px
+    height: 30px
+    +font-normal(normal, 400, 13px, 20px, $font-white)
+
+.footer-top
+  border-bottom: 2px solid $font-white
+  display: flex
+  justify-content: space-between
+  padding: 50px 0 36px
+
+.logo__sub
+  margin-top: 20px
+
+.footer-middle
+  padding: 36px 0
+  display: flex
+  justify-content: space-between
+  align-items: center
+  border-bottom: 2px solid $font-white
+  &__title
+    color: $font-white
+
+.footer-bottom
+  padding: 56px 0 104px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.socials
+  display: flex
+  &__icon
+    a
+      color: $font-grey
+      font-size: 32px
+      cursor: pointer
+      transition: 1s
+    a:hover
+      color: $hover-grey
+  &__icon:not(:last-of-type)
+    margin-right: 30px
